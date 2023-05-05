@@ -1,0 +1,6 @@
+ezkfg
+fastapi[all]
+uvicorn[standard]
+torch
+torchvision
+gradio
