@@ -3,45 +3,61 @@
   <head>
     <title>模型列表</title>
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Helvetica Neue", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #4d4d4d;
+        background-color: #ffffff;
+      }
       .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        height: 100vh;
+        align-items: center;
       }
       .card {
         width: 300px;
-        height: 120px;
+        height: 150px;
         margin: 10px;
         padding: 20px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         border-radius: 5px;
-        background-color: #f8eaff; /* 设置背景色 */
-        border: 2px solid #9e5cf3; /* 设置边框颜色和宽度 */
-        color: #4d4d4d; /* 设置文字颜色 */
-        transition: all 0.3s ease-in-out; /* 添加过渡效果 */
+        background: linear-gradient(#e5f5ff, #f2f2f2);
+        border: 2px solid #ccddff;
+        color: #3399cc;
+        cursor: pointer;
       }
-      .card h2 {
-        font-size: 1.5em;
-        margin: 0 0 10px;
-        font-weight: 600;
-      }
-      .card p {
-        font-size: 1.2em;
-        margin: 0;
-        color: #a0a0a0;
-      }
-      .card:hover {
-        transform: scale(1.05); /* 添加鼠标悬停放大效果 */
-        cursor: pointer; /* 添加鼠标悬停手型效果 */
-      }
-      .card:hover h2 {
-        color: #6a34c9; /* 添加鼠标悬停模型名称颜色变化效果 */
-      }
-      .card:hover p {
-        color: #808080; /* 添加鼠标悬停模型描述颜色变化效果 */
+      .card:before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        right: -6px;
+        bottom: -6px;
+        z-index: -1;
+        background: linear-gradient(#e5f5ff, #f2f2f2);
+        border-radius: 10px;
       }
       a {
-        text-decoration: none; /* 去掉链接下划线 */
+        text-decoration: none;
+      }
+      h2,
+      p {
+        transition: all 0.3s ease-in-out;
+      }
+      h2 {
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+        margin: 0;
+        color: #808080;
       }
     </style>
   </head>
